@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Production</title>
+    <h1>천재 김주형</h1>
+  </head>
+  <body>
+
+    <hr />
+    <h3>입력값</h3><br />
+    "n의 값"
+    <input name="N" type="text" id="N" value="4" /><br />
+    "r의 값"
+    <input name="R" type="text" id="R" value="2" /><br />
+    <button id="submit" onclick="cal();">계산하기</button>
+    <hr />
+    <h3>출력값</h3>
+    <p id="ans"></p>
+    <script type="text/javascript">
+      function cal() {
+        var n = document.getElementById("N").value;
+        var r = document.getElementById('R').value;
+        var i, answer = 1;
+        for (i = 0; i < n; i++) {
+          answer *= r;
+        }
+        document.getElementById('ans').innerHTML = answer;
+      }
+    </script>
+  </body>
